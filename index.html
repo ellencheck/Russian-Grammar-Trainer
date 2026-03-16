@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Russian Grammar Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container exercise-screen">
+
+    <h1>Russian Grammar Trainer</h1>
+
+    <div class="menu">
+
+      <h2>A1</h2>
+
+      <h3>Род существительных</h3>
+      <button onclick="start('gender')">Мужской / Женский / Средний род</button>
+
+      <h3>Множественное число</h3>
+      <button onclick="start('plural')">Единственное / Множественное</button>
+
+      <h3>Личные местоимения</h3>
+      <button onclick="start('pronouns')">я / ты / он / она / мы / вы / они</button>
+
+      <h3>Настоящее время</h3>
+      <button onclick="start('present_reg')">Настоящее время (регулярные)</button>
+      <button onclick="start('present_irr')">Настоящее время (нерегулярные)</button>
+
+      <h3>Возвратные глаголы</h3>
+      <button onclick="start('reflexive')">-ся / -сь</button>
+
+      <h3>Винительный падеж</h3>
+      <button onclick="start('accusative')">Кого? Что?</button>
+
+      <h3>Предложный падеж</h3>
+      <button onclick="start('prepositional')">О ком? О чём?</button>
+
+      <h3>Предлоги</h3>
+      <button onclick="start('prepositions')">в / на / с / у / к</button>
+
+
+      <h2>A2</h2>
+
+      <h3>Прошедшее время</h3>
+      <button onclick="start('past')">Прошедшее время</button>
+
+      <h3>Будущее время</h3>
+      <button onclick="start('future')">Будущее время</button>
+
+      <h3>Дательный падеж</h3>
+      <button onclick="start('dative')">Кому? Чему?</button>
+
+      <h3>Родительный падеж</h3>
+      <button onclick="start('genitive')">Кого? Чего?</button>
+
+      <h3>Творительный падеж</h3>
+      <button onclick="start('instrumental')">Кем? Чем?</button>
+
+      <h3>Вид глагола</h3>
+      <button onclick="start('aspect')">Совершенный / Несовершенный</button>
+
+      <h3>Движение</h3>
+      <button onclick="start('motion')">Идти / Ходить / Ехать / Ездить</button>
+
+      <h3>Императив</h3>
+      <button onclick="start('imperative')">Повелительное наклонение</button>
+
+    </div>
+
+    <div class="card">
+      <h2 id="question">Выбери упражнение</h2>
+      <div id="answers"></div>
+      <h3 id="result"></h3>
+    </div>
+
+    <div class="stats">
+      ✔ <span id="good">0</span> |
+      ✘ <span id="bad">0</span>
+    </div>
+
+    <button id="nextBtn" class="next" onclick="generate()">Следующий</button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
