@@ -1,21 +1,21 @@
 html, body {
 
-    margin:0;
-    padding:0;
-    height:100%;
+margin:0;
+padding:0;
+height:100%;
 
-    font-family: "Trebuchet MS", sans-serif;
+font-family:"Trebuchet MS", sans-serif;
 
-    background:
-    radial-gradient(circle at 20% 30%, #2b1a4a, transparent 60%),
-    radial-gradient(circle at 80% 70%, #1b3a6b, transparent 60%),
-    linear-gradient(160deg,#0f0c29,#1b1440,#0c0a1f);
+background:
+radial-gradient(circle at 20% 30%, #2b1a4a, transparent 60%),
+radial-gradient(circle at 80% 70%, #1b3a6b, transparent 60%),
+linear-gradient(160deg,#0f0c29,#1b1440,#0c0a1f);
 
-    color:#f0f0ff;
+color:#f0f0ff;
 
 }
 
-/* декоративные вензеля */
+/* декоративные символы */
 
 body::before{
 content:"✦ ✧ ✦";
@@ -35,12 +35,11 @@ font-size:40px;
 opacity:0.25;
 }
 
-
 /* контейнер */
 
 .exercise-screen{
 
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 padding:40px;
 
@@ -63,7 +62,6 @@ inset 0 0 20px rgba(255,255,255,0.05);
 .exercise-screen h1{
 
 font-size:48px;
-
 text-align:center;
 
 letter-spacing:3px;
@@ -78,12 +76,15 @@ margin-bottom:30px;
 
 }
 
-
 /* ===== МЕНЮ ===== */
 
 .menu{
 
-text-align:center;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
+gap:12px;
 
 padding:30px;
 
@@ -98,31 +99,23 @@ box-shadow: inset 0 0 15px rgba(255,255,255,0.05);
 }
 
 .menu h2{
-
+width:100%;
+text-align:center;
 font-size:30px;
-
 color:#b8bfff;
-
 }
 
 .menu h3{
-
+width:100%;
+text-align:center;
 font-size:22px;
-
 color:#d0d4ff;
-
 }
-
-
-/* кнопки меню */
 
 .menu button{
 
-font-size:22px;
-
-padding:14px 24px;
-
-margin:6px;
+font-size:20px;
+padding:12px 22px;
 
 border-radius:40px;
 
@@ -152,49 +145,57 @@ box-shadow:
 
 }
 
-
 /* ===== ВОПРОС ===== */
 
 #question{
 
-font-size:48px;
+font-size:46px;
 
 text-align:center;
 
-margin:40px 0;
+margin:40px auto;
 
-color:#ffffff;
+max-width:700px;
 
-text-shadow:0 0 12px rgba(255,255,255,0.3);
+padding:25px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.07);
+
+box-shadow:0 0 20px rgba(120,120,255,0.2);
+
+color:white;
 
 }
 
-
-/* ответы */
+/* ===== ОТВЕТЫ ===== */
 
 #answers{
 
-max-width:650px;
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+max-width:800px;
 
 margin:auto;
 
 }
 
+/* карточки ответов */
+
 .exercise-screen .answer{
 
-width:100%;
+font-size:26px;
 
-font-size:28px;
+padding:22px;
 
-padding:20px;
+border-radius:20px;
 
-margin:12px 0;
-
-border-radius:18px;
-
-border:1px solid rgba(255,255,255,0.2);
-
-background:rgba(255,255,255,0.05);
+border:none;
 
 color:white;
 
@@ -202,13 +203,53 @@ cursor:pointer;
 
 transition:all 0.25s;
 
+box-shadow:0 6px 14px rgba(0,0,0,0.35);
+
 }
+
+/* разные цвета кнопок */
+
+.exercise-screen .answer:nth-child(1){
+background:linear-gradient(135deg,#ff7a7a,#ff3d6e);
+}
+
+.exercise-screen .answer:nth-child(2){
+background:linear-gradient(135deg,#ffb36b,#ff8c42);
+}
+
+.exercise-screen .answer:nth-child(3){
+background:linear-gradient(135deg,#ffd86b,#ffb347);
+}
+
+.exercise-screen .answer:nth-child(4){
+background:linear-gradient(135deg,#8ce99a,#38d39f);
+}
+
+.exercise-screen .answer:nth-child(5){
+background:linear-gradient(135deg,#6bc9ff,#3a86ff);
+}
+
+.exercise-screen .answer:nth-child(6){
+background:linear-gradient(135deg,#b38cff,#8a5cff);
+}
+
+/* небольшая асимметрия */
+
+.exercise-screen .answer:nth-child(odd){
+transform:rotate(-1deg);
+}
+
+.exercise-screen .answer:nth-child(even){
+transform:rotate(1deg);
+}
+
+/* hover */
 
 .exercise-screen .answer:hover{
 
-background:rgba(255,255,255,0.12);
+transform:scale(1.06);
 
-transform:translateX(6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.45);
 
 }
 
@@ -232,14 +273,13 @@ box-shadow:0 0 20px rgba(255,80,90,0.6);
 
 }
 
-
-/* кнопка далее */
+/* ===== КНОПКА ДАЛЕЕ ===== */
 
 .exercise-screen .next{
 
 display:block;
 
-margin:30px auto;
+margin:35px auto;
 
 font-size:22px;
 
@@ -269,7 +309,6 @@ box-shadow:0 0 25px rgba(150,170,255,0.9);
 
 }
 
-
 /* кнопка озвучки */
 
 #speakBtn{
@@ -295,11 +334,8 @@ box-shadow:0 0 15px rgba(255,120,100,0.6);
 }
 
 #speakBtn:hover{
-
 transform:scale(1.05);
-
 }
-
 
 /* статистика */
 
@@ -315,10 +351,13 @@ color:#c9ccff;
 
 }
 
-
 /* адаптив */
 
 @media (max-width:768px){
+
+#answers{
+grid-template-columns:1fr 1fr;
+}
 
 .exercise-screen h1{
 font-size:36px;
