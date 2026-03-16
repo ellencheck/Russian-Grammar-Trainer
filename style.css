@@ -205,32 +205,10 @@ transition:all 0.25s;
 
 box-shadow:0 6px 14px rgba(0,0,0,0.35);
 
-}
+/* единый цвет */
 
-/* разные цвета кнопок */
+background:linear-gradient(135deg,#4b5cff,#8f9aff);
 
-.exercise-screen .answer:nth-child(1){
-background:linear-gradient(135deg,#ff7a7a,#ff3d6e);
-}
-
-.exercise-screen .answer:nth-child(2){
-background:linear-gradient(135deg,#ffb36b,#ff8c42);
-}
-
-.exercise-screen .answer:nth-child(3){
-background:linear-gradient(135deg,#ffd86b,#ffb347);
-}
-
-.exercise-screen .answer:nth-child(4){
-background:linear-gradient(135deg,#8ce99a,#38d39f);
-}
-
-.exercise-screen .answer:nth-child(5){
-background:linear-gradient(135deg,#6bc9ff,#3a86ff);
-}
-
-.exercise-screen .answer:nth-child(6){
-background:linear-gradient(135deg,#b38cff,#8a5cff);
 }
 
 /* небольшая асимметрия */
